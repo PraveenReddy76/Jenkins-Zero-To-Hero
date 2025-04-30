@@ -5,9 +5,13 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh '''pwd
-docker images
-jenkins --version'''
+        
+        sh 
+        '''
+        echo "current working directory"
+        pwd
+        echo "it displays the version of node js"
+            node --version'''
       }
     }
   }
